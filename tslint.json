@@ -1,16 +1,50 @@
 {
   "defaultSeverity": "error",
   "extends": [
-    "tslint:recommended",
-    "tslint-config-standard",
+    "tslint-clean-code",
+    "tslint-config-airbnb",
+    "tslint-config-prettier",
+    "tslint-plugin-prettier",
     "tslint-react",
-    "tslint-config-prettier"
+    "tslint-no-circular-imports"
   ],
   "jsRules": {},
   "rules": {
     "ordered-imports": false,
     "object-literal-sort-keys": false,
-    "member-ordering": false
+    "member-ordering": false,
+    "ban-types": [
+      true,
+      ["Object", "Use {} instead."],
+      ["String", "Use 'string' instead."],
+      ["Boolean", "Use 'boolean' instead."],
+      ["Function", "Use '() => void' instead."],
+      ["JSX.Element", "Use 'ReactChild' instead"]
+    ],
+    "import-name": false,
+    "jsx-alignment": false,
+    "jsx-boolean-value": [true, "never"],
+    "jsx-curly-spacing": false,
+    "jsx-no-lambda": true,
+    "jsx-no-multiline-js": false,
+    "jsx-self-close": false,
+    "jsx-use-translation-function": true,
+    "max-line-length": [true, 140],
+    "no-commented-out-code": true,
+    "no-console": [true, "log"],
+    "no-inferrable-types": true,
+    "object-shorthand-properties-first": false,
+    "prefer-array-literal": false,
+    "prettier": true,
+    "variable-name": [
+      true,
+      "check-format",
+      "allow-pascal-case",
+      "allow-leading-underscore"
+    ]
   },
-  "rulesDirectory": []
+  "rulesDirectory": [],
+  "linterOptions": {
+    "exclude": []
+  }
 }
